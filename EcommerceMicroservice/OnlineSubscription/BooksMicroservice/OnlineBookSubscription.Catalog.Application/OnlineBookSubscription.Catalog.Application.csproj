@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineBookSubscription.Catalog.Data\OnlineBookSubscription.Catalog.Data.csproj" />
+    <ProjectReference Include="..\OnlineBookSubscription.Catalog.Domain\OnlineBookSubscription.Catalog.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

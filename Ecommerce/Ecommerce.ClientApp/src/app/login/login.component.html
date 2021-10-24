@@ -1,0 +1,35 @@
+<br>
+<form #loginform="ngForm" (ngSubmit)="onLogin()">
+    <div class="col-sm-6">
+    <div class="card card-header"> Login </div>
+    <div class="card card-body">
+
+
+
+            <div class="form-group">
+                <label class="col-sm-2">Username: </label>
+                <input type="email" class="form-control" [(ngModel)]="user.email" name="loginname" #loginname="ngModel" placeholder="Enter Email Id" required
+                ngModel [email]="true">
+                <span class="text-danger" *ngIf="loginname.touched && loginname.invalid" >Email is required</span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="col-sm-2">Password: </label>
+                <input type="password" class="form-control" placeholder="Enter password" required [(ngModel)]="user.password" name="password" #password="ngModel">
+                <span class="text-danger" *ngIf="password.touched && password.invalid">Password is required</span>
+                <span class="text-danger" *ngIf="!validLogin" style="text-align: center;" >Invalid Email / Password! </span>
+            </div>
+    </div>
+    <div class="card card-footer">
+        <div class="align-self-end">
+
+
+                <button type="submit" class="btn btn-primary" [disabled]="loginform.invalid">Login</button>
+
+
+
+           </div>
+
+    </div>
+</div>
+</form>

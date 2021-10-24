@@ -1,0 +1,58 @@
+<br>
+<div class="card card-header">Order Detail</div>
+<div class="card card-body">
+    <div class="row">
+        <div class="col-sm-2">Order No:</div>
+        <div class="col-sm-10">{{orderinfo.invoiceNumber}}  </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">Date Time:</div>
+        <div class="col-sm-10">{{orderinfo.purchaseDate | date: 'dd-MMM-yyyy'}}</div>
+    </div>
+    <br>
+    <div class="row">
+        <table class="table border">
+            <thead class="thead-light">
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Sub Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of orderinfo.orderDetails">
+                    <td>
+                        <div class="card product p-2 pt-2" style="width: 100px">
+                            <img class="img-fluid d-block" src="{{ apiPath +  item.thumbnailPath }}" alt="{{item.title}}">
+                        </div>
+                    </td>
+                    <td>
+                        {{item.title}}
+                    </td>
+                    <td>
+                        {{item.quantity}}
+                    </td>
+                    <td>
+                        {{item.price}}
+                    </td>
+                    <td>
+                        {{item.quantity*item.price}}
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total:</td>
+                    <td>Rs. {{orderinfo.totalCost}}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+</div>
+<div class="card card-footer"></div>

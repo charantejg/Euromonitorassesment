@@ -1,0 +1,21 @@
+<br>
+<div class="card card-header">My Orders</div>
+<div class="card card-body">
+    <table class="table border">
+        <thead class="thead-light">
+            <tr>
+                <th>Order No</th>
+                <th>DateTime</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td><a href="orderdetail/{{order.ordersId}}" >{{order.invoiceNumber}}</a></td>
+                <td>{{order.purchaseDate | date: 'dd-MMM-yyyy'}}</td>
+                <td>Rs. {{order.totalCost}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="card card-footer"></div>
