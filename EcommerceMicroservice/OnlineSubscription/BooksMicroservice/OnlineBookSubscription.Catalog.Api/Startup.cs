@@ -1,31 +1,20 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using OnlineBookSubscription.Catalog.Application;
+using OnlineBookSubscription.Catalog.Application.Interfaces;
 using OnlineBookSubscription.Catalog.Data;
 using OnlineBookSubscription.Catalog.Data.Repository;
 using OnlineBookSubscription.Catalog.Data.Repository.Interfaces;
 using OnlineBookSubscription.Catalog.Data.UnitOfWork;
 using OnlineBookSubscription.Catalog.Data.UnitOfWork.Interfaces;
-using OnlineBookSubscription.Identity.Data.Repository.Interfaces;
-using OnlineBookSubscription.Catalog.Application.Interfaces;
-using IdentityServer4.AccessTokenValidation;
 
-namespace OnlineBookSubscription.Catalog
+namespace OnlineBookSubscription.Catalog.Api
 {
     public class Startup
     {
@@ -66,7 +55,9 @@ namespace OnlineBookSubscription.Catalog
 
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<IBookService, BookService>();
+            services.AddScoped<IBookService, BookService>();
+            services.AddScoped<ISubscriptionService, SubscriptionService>();
+
 
             services.AddCors(options =>
             {

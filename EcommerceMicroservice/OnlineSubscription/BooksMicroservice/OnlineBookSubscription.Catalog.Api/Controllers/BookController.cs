@@ -1,19 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using OnlineBookSubscription.Catalog.Application.DTO;
 using OnlineBookSubscription.Catalog.Application.Interfaces;
 using OnlineBookSubscription.Catalog.Domain.Entities;
 
-namespace OnlineBookSubscription.Catalog.Controllers
+namespace OnlineBookSubscription.Catalog.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,15 +16,13 @@ namespace OnlineBookSubscription.Catalog.Controllers
     {
         private readonly IBookService _bookService;
         private readonly IMapper _mapper;
-        private readonly Microsoft.Extensions.Configuration.IConfiguration _configuration;
-        private readonly IWebHostEnvironment _env;
+      
 
-        public BookController(IBookService bookService, IMapper mapper, IConfiguration configuration, IWebHostEnvironment env)
+        public BookController(IBookService bookService, IMapper mapper)
         {
             _bookService = bookService;
             _mapper = mapper;
-            _configuration = configuration;
-            _env = env;
+           
         }
         
         [HttpGet]

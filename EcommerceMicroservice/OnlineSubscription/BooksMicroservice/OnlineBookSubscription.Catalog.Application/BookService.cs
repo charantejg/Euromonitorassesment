@@ -30,7 +30,11 @@ namespace OnlineBookSubscription.Catalog.Application
 
         public async Task<bool> AddBook(Book book)
         {
-            throw new System.NotImplementedException();
+            await _unitOfWork.Books.Add(book);
+            _unitOfWork.Save();
+            _unitOfWork.Dispose();
+            return true;
         }
+
     }
 }

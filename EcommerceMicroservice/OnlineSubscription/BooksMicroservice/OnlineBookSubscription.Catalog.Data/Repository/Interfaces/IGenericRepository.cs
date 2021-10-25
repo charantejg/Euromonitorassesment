@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace OnlineBookSubscription.Identity.Data.Repository.Interfaces
+namespace OnlineBookSubscription.Catalog.Data.Repository.Interfaces
 {
     public interface IGenericRepository<T> where T : class
     {

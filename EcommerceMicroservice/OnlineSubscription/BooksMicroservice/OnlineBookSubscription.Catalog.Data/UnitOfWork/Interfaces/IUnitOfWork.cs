@@ -1,5 +1,5 @@
-﻿using OnlineBookSubscription.Catalog.Domain.Entities;
-using OnlineBookSubscription.Identity.Data.Repository.Interfaces;
+﻿using OnlineBookSubscription.Catalog.Data.Repository.Interfaces;
+using OnlineBookSubscription.Catalog.Domain.Entities;
 
 namespace OnlineBookSubscription.Catalog.Data.UnitOfWork.Interfaces
 {

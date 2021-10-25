@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityService\IdentityServer.Core\IdentityServer.csproj", "{99FC432B-AD4F-4A5B-B802-EC0FB275F7C6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineBookSubscription.Catalog", "BooksMicroservice\OnlineBookSubscription.Catalog\OnlineBookSubscription.Catalog.csproj", "{F208C554-3A19-459F-85BD-9080769CBEB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineBookSubscription.Catalog.Api", "BooksMicroservice\OnlineBookSubscription.Catalog.Api\OnlineBookSubscription.Catalog.Api.csproj", "{F208C554-3A19-459F-85BD-9080769CBEB6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineBookSubscription.Catalog.Application", "BooksMicroservice\OnlineBookSubscription.Catalog.Application\OnlineBookSubscription.Catalog.Application.csproj", "{EA40E445-A7F9-451F-8EE7-23C75CE50F1D}"
 EndProject
@@ -19,7 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "Identity
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{2E097E88-C09B-4804-B8DF-6793D97466AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayApi", "Gateway\GatewayApi\GatewayApi.csproj", "{FED1A3EB-74BE-466F-8602-2ECFC9ED9F52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewayApi", "Gateway\GatewayApi\GatewayApi.csproj", "{FED1A3EB-74BE-466F-8602-2ECFC9ED9F52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{14BF241B-66FF-4705-B0C5-748FD2F01089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSubscription.Catalog.UnitTest", "Test\OnlineSubscription.Catalog.UnitTest\OnlineSubscription.Catalog.UnitTest.csproj", "{26D61199-1C90-4C2E-8BD0-DDD0C15F6271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{FED1A3EB-74BE-466F-8602-2ECFC9ED9F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FED1A3EB-74BE-466F-8602-2ECFC9ED9F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FED1A3EB-74BE-466F-8602-2ECFC9ED9F52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26D61199-1C90-4C2E-8BD0-DDD0C15F6271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26D61199-1C90-4C2E-8BD0-DDD0C15F6271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26D61199-1C90-4C2E-8BD0-DDD0C15F6271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26D61199-1C90-4C2E-8BD0-DDD0C15F6271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +70,8 @@ Global
 		{5749F544-D459-440D-912E-BA1CEA70E608} = {EEB01C15-FBFD-46C4-8F55-C826DC0F9436}
 		{AF9E4870-7DF5-45B7-8A7C-95CCE2F4A2EE} = {EEB01C15-FBFD-46C4-8F55-C826DC0F9436}
 		{FED1A3EB-74BE-466F-8602-2ECFC9ED9F52} = {2E097E88-C09B-4804-B8DF-6793D97466AB}
+		{14BF241B-66FF-4705-B0C5-748FD2F01089} = {EEB01C15-FBFD-46C4-8F55-C826DC0F9436}
+		{26D61199-1C90-4C2E-8BD0-DDD0C15F6271} = {14BF241B-66FF-4705-B0C5-748FD2F01089}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A8D9672-7B24-458F-8788-950D7FDC3CFF}

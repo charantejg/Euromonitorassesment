@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper.Configuration;
+﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using OnlineBookSubscription.Catalog.Application.DTO;
 using OnlineBookSubscription.Catalog.Domain.Entities;
 
-namespace OnlineBookSubscription.Catalog.Mapping
+namespace OnlineBookSubscription.Catalog.Api.Mapping
 {
     public class MappingProfile: AutoMapper.Profile
     {
@@ -33,6 +28,10 @@ namespace OnlineBookSubscription.Catalog.Mapping
                      Path.Combine(_env.WebRootPath ,_configuration["ImagePath"], dest.Thumbnail);
 
                  });
+
+            CreateMap<Subscription, SubscribeDto>().ReverseMap();
+         
+
         }
 
     }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using OnlineBookSubscription.Identity.Data.Repository.Interfaces;
+using OnlineBookSubscription.Catalog.Data.Repository.Interfaces;
 
 namespace OnlineBookSubscription.Catalog.Data.Repository
 {
